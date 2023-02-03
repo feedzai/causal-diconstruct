@@ -1,0 +1,178 @@
+---
+learning_rate:
+  type: categorical
+  config:
+    - 0.01
+    - 0.001
+    - 0.0001
+    - 0.00001
+l2_decay:
+  type: loguniform
+  config:
+    min: 0.000001
+    max: 0.01
+up_to_batch:
+  type: uniform
+  config:
+    min: 12000
+    max: 12001
+train_batch_size:
+  type: loguniform
+  config:
+    min: 2
+    max: 128
+cat_features_embeddings:
+  type: categorical
+  config:
+    - loaded
+    - simplified
+common_hidden_layers:
+  type: categorical
+  config:
+    - [128, 64]
+    - [128, 64, 32]
+    - [256, 128, 64]
+    - [200, 100, 50]
+common_dropouts:
+  type: categorical
+  config:
+    - [0.3, 0.0, 0.0]
+    - [0.2, 0.0, 0.0]
+    - [0.2, 0.1, 0.0]
+    - [0.3, 0.1, 0.1]
+    - [0.5, 0.1, 0.0]
+    - [0.5, 0.1, 0.1]
+    - [0.5, 0.2, 0.1]
+common_batch_norm:
+  type: categorical
+  config:
+    - true
+    - false
+concept_hidden_layers:
+  type: categorical
+  config:
+    - [16, 4]
+    - [32, 16]
+    - [32, 16, 8]
+    - [64, 32, 16, 8]
+    - [64, 16, 8, 4]
+    - [128, 64, 16, 4]
+    - [256, 64, 8, 4]
+    - [16, 8, 4]
+concept_dropouts:
+  type: categorical
+  config:
+    - [0.2, 0.1, 0.1, 0.0]
+    - [0.1, 0.1, 0.0, 0.0]
+    - [0.1, 0.0, 0.0, 0.0]
+    - [0.3, 0.2, 0.1, 0.0]
+    - [0.2, 0.0, 0.0, 0.0]
+concept_batch_norm:
+  type: categorical
+  config:
+    - true
+    - false
+distil_hidden_layers:
+  type: categorical
+  config:
+    - [256, 128, 64, 32, 16, 8, 4]
+    - [512, 256, 128, 64, 32, 8, 4]
+    - [1024, 256, 64, 16, 4]
+    - [1024, 512, 128, 32, 4]
+    - [256, 128, 64, 32, 8, 4]
+    - [256, 64, 64, 32, 8, 4]
+    - [128, 64, 32, 16, 8]
+    - [200, 100, 50, 32, 8]
+    - [128, 32, 16]
+    - [128, 32, 16, 4]
+    - [64, 32, 16, 8]
+distil_dropouts:
+  type: categorical
+  config:
+    - [0.5, 0.3, 0.2, 0.1, 0.0, 0.0, 0.0]
+    - [0.1, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0]
+    - [0.3, 0.2, 0.2, 0.1, 0.0, 0.0, 0.0]
+    - [0.2, 0.2, 0.2, 0.1, 0.0, 0.0, 0.0]
+    - [0.2, 0.2, 0.1, 0.0, 0.0, 0.0, 0.0]
+distil_batch_norm:
+  type: categorical
+  config:
+    - true
+    - false
+independent_discriminator_hidden_layers:
+  type: categorical
+  config:
+    - [24, 12, 8, 6, 4]
+    - [10, 8, 6, 4]
+    - [10, 8, 3]
+    - [16, 8, 4]
+    - [16, 8]
+    - [16, 4]
+independent_discriminator_dropouts:
+  type: categorical
+  config:
+    - [0.1, 0.1, 0.01, 0.0, 0.0]
+    - [0.1, 0.01, 0.0, 0.0, 0.0]
+    - [0.2, 0.1, 0.0, 0.0, 0.0]
+    - [0.0, 0.0, 0.0, 0.0, 0.0]
+    - [0.1, 0.0, 0.0, 0.0, 0.0]
+    - [0.1, 0.1, 0.0, 0.0, 0.0]
+local_hidden_layers:
+  type: categorical
+  config:
+    - [24, 16, 8]
+    - [24, 16, 8, 4]
+    - [16, 8, 6, 4]
+    - [16, 8, 4]
+    - [16, 8, 4]
+    - [16, 8]
+    - [16, 4]
+local_dropouts:
+  type: categorical
+  config:
+    - [0.1, 0.01, 0.0, 0.0]
+    - [0.2, 0.1, 0.0, 0.0]
+    - [0.0, 0.0, 0.0, 0.0]
+    - [0.1, 0.0, 0.0, 0.0]
+    - [0.1, 0.1, 0.0, 0.0]
+local_batch_norm:
+  type: categorical
+  config:
+    - true
+    - false
+independent_loss_gamma:
+  type: loguniform
+  config:
+    min: 0.001
+    max: 20
+ind_comp_lr:
+  type: loguniform
+  config:
+    min: 0.0001
+    max: 0.05
+train_independence_every:
+  type: categorical
+  config:
+    - 1
+    - 2
+    - 3
+with_biases:
+  type: categorical
+  config:
+    - true
+    - false
+uses_target_for_distillation:
+  type: categorical
+  config:
+    - true
+    - false
+data_augmentation:
+  type: categorical
+  config:
+    - true
+    - false
+soft_labels:
+  type: categorical
+  config:
+    - true
+    - false

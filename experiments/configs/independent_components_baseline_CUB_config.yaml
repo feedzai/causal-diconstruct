@@ -1,0 +1,20 @@
+---
+baseline: independent_components
+device_id: 2
+experiment_name: independent_components_CUB_baseline
+
+seed: 73
+num_workers: 6
+nr_trials: 200
+eval_batch_size: 200
+save_base_path: causal_diconstruct_CUB_baselines
+parameter_config_path: "baselines_parameters_config_CUB.yaml"
+no_improvement_epochs: 15
+used_concepts:
+ - "is_shape_perching-like"
+ - "is_bill_length_shorter_than_head"
+ - "is_bill_shape_all-purpose"
+ - "is_eye_color_black"
+ - "is_nape_color_black"
+ - "is_primary_color_black"
+ - "is_back_color_black"

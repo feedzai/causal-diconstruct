@@ -1,0 +1,20 @@
+---
+device_id: 1
+experiment_name: exogenous_cbm_cub_nn
+prior_model: exogenous      # "trainable" or "exogenous"
+
+seed: 73
+num_workers: 5
+nr_trials: 50
+eval_batch_size: 200
+save_base_path: concept_bottleneck_experiments
+parameter_config_path: "CBMs_parameters_CUB_config.yaml"
+no_improvement_epochs: 20
+used_concepts:
+  - "is_shape_perching-like"
+  - "is_bill_length_shorter_than_head"
+  - "is_bill_shape_all-purpose"
+  - "is_eye_color_black"
+  - "is_nape_color_black"
+  - "is_primary_color_black"
+  - "is_back_color_black"

@@ -1,0 +1,31 @@
+---
+data_augmentation:
+  type: categorical
+  config:
+    - true
+    - false
+learning_rate:
+  type: categorical
+  config:
+    - 0.01
+    - 0.001
+    - 0.0001
+    - 0.00001
+    - 0.000001
+    - 0.0000001
+    - 0.00000001
+l2_decay:
+  type: loguniform
+  config:
+    min: 0.000001
+    max: 1
+up_to_batch:
+  type: uniform
+  config:
+    min: 12000
+    max: 12001
+train_batch_size:
+  type: loguniform
+  config:
+    min: 2
+    max: 128
