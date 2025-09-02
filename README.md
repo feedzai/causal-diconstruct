@@ -1,6 +1,6 @@
 # DiConStruct: Causal Concept-based Explanations through Black-Box Distillation
 
-This repository contains the code to reproduce experiments from the paper "DiConStruct: Causal Concept-based Explanations through Black-Box Distillation"
+This repository contains results and the code to reproduce experiments from the paper "DiConStruct: Causal Concept-based Explanations through Black-Box Distillation"
 
 
 Bibtex citation:
