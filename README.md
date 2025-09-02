@@ -7,7 +7,7 @@ Bibtex citation:
 
 @InProceedings{pmlr-v236-moreira24a, \
     title = 	 {DiConStruct: Causal Concept-based Explanations through Black-Box Distillation}, \
-    author =       {Moreira, Ricardo Miguel de Oliveira and Bono, Jacopo and Cardoso, M\'ario and Saleiro, Pedro and Figueiredo, M\'ario A. T. and Bizarro, Pedro}, \
+    author =       {Moreira, Ricardo Miguel de Oliveira and Bono, Jacopo and Cardoso, Mário and Saleiro, Pedro and Figueiredo, Mário A. T. and Bizarro, Pedro}, \
     booktitle = 	 {Proceedings of the Third Conference on Causal Learning and Reasoning}, \
     pages = 	 {740--768}, \
     year = 	 {2024}, \
